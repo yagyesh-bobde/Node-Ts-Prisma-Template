@@ -12,14 +12,14 @@ const routes_1 = __importDefault(require("./routes"));
 const client_1 = require("@prisma/client");
 const app = (0, express_1.default)();
 const port = config_1.default.get("port");
+exports.prismaClient = new client_1.PrismaClient({
+    log: ['query', 'info', 'warn'],
+});
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use(routes_1.default);
 app.get("/", (req, res) => {
     res.send("Hello World");
-});
-exports.prismaClient = new client_1.PrismaClient({
-    log: ['query', 'info', 'warn'],
 });
 app.listen(port, () => {
     logger_1.default.info(`Server started on http://localhost:${port}`);

@@ -10,6 +10,10 @@ const app = express()
 
 const port = config.get("port");
 
+export const prismaClient = new PrismaClient({
+    log: ['query', 'info', 'warn'],
+});
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -20,9 +24,6 @@ app.get("/", (req, res) => {
     res.send("Hello World")
 })
 
-export const prismaClient = new PrismaClient({
-    log: ['query', 'info', 'warn'],
-});
 
 app.listen(port, () => {
     log.info(`Server started on http://localhost:${port}`);

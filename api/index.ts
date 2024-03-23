@@ -1,6 +1,6 @@
 require('dotenv').config()
 import express from 'express'
-import log from '../src/utils/logger';
+// import log from '../src/utils/logger';
 import router from '../src/routes';
 import { PrismaClient } from '@prisma/client'
 import config from '../src/config/default'
@@ -25,7 +25,8 @@ app.get("/", (req, res) => {
 
 
 app.listen(port, () => {
-    log.info(`Server started on http://localhost:${port}`);
+    // log.info(`Server started on http://localhost:${port}`);
+    console.log(`Server started on http://localhost:${port}`);
 });
 
 module.exports = app;

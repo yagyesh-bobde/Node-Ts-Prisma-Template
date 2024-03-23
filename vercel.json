@@ -1,4 +1,4 @@
 {
-  "buildCommand": "npm run start",
-  "outputDirectory": "dist"
+  "version": 2,
+  "rewrites": [{ "source": "/(.*)", "destination": "/src" }]
 }

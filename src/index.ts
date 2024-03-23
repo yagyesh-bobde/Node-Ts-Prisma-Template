@@ -27,3 +27,5 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     log.info(`Server started on http://localhost:${port}`);
 });
+
+module.exports = app;

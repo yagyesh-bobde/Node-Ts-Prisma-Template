@@ -1,8 +1,8 @@
 require('dotenv').config()
 import express from 'express'
-import router from '../src/routes';
+import router from './routes';
 import { PrismaClient } from '@prisma/client'
-import config from '../src/config/default'
+import config from './config/default'
 
 
 const app = express()

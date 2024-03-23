@@ -2,8 +2,9 @@
   "version": 2,
   "builds": [
     {
-      "src": "tsconfig.json",
-      "use": "@vercel/node"
+      "src": "dist/index.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**/*"] }
     }
   ],
   "routes": [

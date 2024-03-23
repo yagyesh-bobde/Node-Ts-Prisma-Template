@@ -10,4 +10,3 @@ router.get('/healthcheck', (_, res, next) => {
     next();
 });
 exports.default = router;
-//# sourceMappingURL=index.js.map

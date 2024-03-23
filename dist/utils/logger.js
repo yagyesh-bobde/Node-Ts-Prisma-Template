@@ -17,4 +17,3 @@ const log = (0, pino_1.default)({
     timestamp: () => `,"time":"${(0, dayjs_1.default)().format()}"`,
 });
 exports.default = log;
-//# sourceMappingURL=logger.js.map

@@ -15,4 +15,3 @@ exports.default = {
     RAZORPAY_KEY_ID,
     RAZORPAY_KEY_SECRET
 };
-//# sourceMappingURL=default.js.map

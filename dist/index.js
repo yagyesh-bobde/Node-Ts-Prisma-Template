@@ -25,4 +25,3 @@ app.listen(port, () => {
     logger_1.default.info(`Server started on http://localhost:${port}`);
 });
 module.exports = app;
-//# sourceMappingURL=index.js.map

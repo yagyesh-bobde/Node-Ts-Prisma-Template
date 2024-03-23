@@ -2,13 +2,13 @@
   "name": "lucrente-backend",
   "version": "1.0.0",
   "description": "Backend for Lucrente",
-  "main": "src/app.ts",
+  "main": "index.ts",
   "author": "Yagyesh Bobde <yagyeshSRbobde@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts",
-    "start": "nodemon src/app.ts",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "start": "nodemon src/index.ts",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist"
@@ -26,7 +26,9 @@
     "@types/nodemailer": "^6.4.14",
     "nodemon": "^3.1.0",
     "pino-pretty": "^11.0.0",
+    "pre-commit": "^1.2.2",
     "prisma": "^5.11.0",
+    "rimraf": "^5.0.5",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.3"
   },

@@ -11,4 +11,4 @@ yarn add typescript ts-node-dev @types/express @types/config pino-pretty @types/
 yarn add express
 
 ## Install dependencies
-yarn add mongoose config argon2 pino dayjs nodemailer nanoid lodash jsonwebtoken dotenv @prisma/client 
+yarn add mongoose config argon2 pino dayjs nodemailer nanoid lodash jsonwebtoken dotenv @prisma/client

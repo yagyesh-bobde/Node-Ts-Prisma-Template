@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run start",
+  "buildCommand": "npm run build",
   "builds": [{ "src": "dist/index.js", "use": "@vercel/node" }],
   "routes": [
     { "handle": "filesystem" },

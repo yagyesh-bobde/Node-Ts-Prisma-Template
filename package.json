@@ -6,7 +6,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "npm run build && node dist/index.js",
     "build": "npx prisma generate --schema=./src/prisma/schema.prisma && rimraf dist && tsc"
   },
   "devDependencies": {

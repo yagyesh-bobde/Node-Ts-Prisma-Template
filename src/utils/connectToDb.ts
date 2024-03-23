@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import config from "config";
-import log from "./logger";
 
 async function connectToDb() {
 
@@ -8,7 +7,7 @@ async function connectToDb() {
     
     try {
         await mongoose.connect(dbUrl);
-        log.info("Connected to MongoDB")
+        console.log("Connected to MongoDB")
     } catch (error) {
         console.error("Error connecting to MongoDB", error);
         process.exit(1)

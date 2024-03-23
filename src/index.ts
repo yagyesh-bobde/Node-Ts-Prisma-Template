@@ -3,7 +3,7 @@ import express from 'express'
 import log from './utils/logger';
 import router from './routes';
 import { PrismaClient } from '@prisma/client';
-import config from '../config/default'
+import config from './config/default'
 
 
 const app = express()

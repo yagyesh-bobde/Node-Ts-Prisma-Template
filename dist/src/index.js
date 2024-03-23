@@ -6,12 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.prismaClient = void 0;
 require('dotenv').config();
 const express_1 = __importDefault(require("express"));
-const config_1 = __importDefault(require("config"));
 const logger_1 = __importDefault(require("./utils/logger"));
 const routes_1 = __importDefault(require("./routes"));
 const client_1 = require("@prisma/client");
+const default_1 = __importDefault(require("../config/default"));
 const app = (0, express_1.default)();
-const port = config_1.default.get("port");
+const port = default_1.default.port;
 exports.prismaClient = new client_1.PrismaClient({
     log: ['query', 'info', 'warn'],
 });

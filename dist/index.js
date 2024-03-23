@@ -3,15 +3,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.prismaClient = void 0;
 require('dotenv').config();
 const express_1 = __importDefault(require("express"));
 const routes_1 = __importDefault(require("./routes"));
+const client_1 = require("@prisma/client");
 const default_1 = __importDefault(require("./config/default"));
 const app = (0, express_1.default)();
 const port = default_1.default.port;
-// export const prismaClient = new PrismaClient({
-//     log: ['query', 'info', 'warn', 'error'],
-// });
+exports.prismaClient = new client_1.PrismaClient({
+    log: ['query', 'info', 'warn', 'error'],
+});
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use(routes_1.default);

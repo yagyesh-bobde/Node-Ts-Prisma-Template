@@ -5,7 +5,7 @@ npm i -g typescript
 tsc --init
 
 ## Install dev dependencies
-yarn add typescript ts-node-dev @types/express @types/config pino-pretty @types/nodemailer @types/lodash @types/jsonwebtoken prisma -D
+yarn add typescript ts-node-dev @types/express @types/config pino-pretty @types/nodemailer @types/lodash @types/jsonwebtoken prisma pre-commit rimraf -D
 
 ## Install Express
 yarn add express

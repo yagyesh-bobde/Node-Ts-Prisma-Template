@@ -6,9 +6,19 @@
   "author": "Yagyesh Bobde <yagyeshSRbobde@gmail.com>",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts"
+    "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts", 
+    "start": "node src/app.ts",  
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
   },
+  "pre-commit": [
+      "ts.check",
+      "build",
+      "add-build"
+  ],
   "devDependencies": {
     "@types/config": "^3.3.4",
     "@types/express": "^4.17.21",

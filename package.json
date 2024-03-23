@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "npx prisma generate --schema=./src/prisma/schema.prisma && rimraf dist && tsc"
+    "postinstall": "prisma generate --schema=./src/prisma/schema.prisma"
   },
   "devDependencies": {
     "@types/config": "^3.3.4",

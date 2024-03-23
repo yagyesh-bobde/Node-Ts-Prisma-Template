@@ -15,6 +15,9 @@ const port = config_1.default.get("port");
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use(routes_1.default);
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
 exports.prismaClient = new client_1.PrismaClient({
     log: ['query', 'info', 'warn'],
 });

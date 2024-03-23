@@ -16,6 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(router)
 
+app.get("/", (req, res) => {
+    res.send("Hello World")
+})
 
 export const prismaClient = new PrismaClient({
     log: ['query', 'info', 'warn'],

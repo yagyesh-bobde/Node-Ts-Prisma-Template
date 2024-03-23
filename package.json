@@ -1,0 +1,9 @@
+{
+  "name": "lucrente-backend",
+  "version": "1.0.0",
+  "description": "Backend for Lucrente",
+  "main": "index.js",
+  "author": "Yagyesh Bobde <yagyeshSRbobde@gmail.com>",
+  "license": "MIT",
+  "private": false
+}

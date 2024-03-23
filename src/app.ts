@@ -2,6 +2,8 @@ require('dotenv').config()
 import express from 'express'
 import config from 'config'
 import connectToDb from './utils/connectToDb';
+import log from './utils/logger';
+import router from './routes';
 
 
 const app = express()
@@ -9,7 +11,12 @@ const app = express()
 const port = config.get("port");
 
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(router)
+
 app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`);
+    log.info(`Server started on http://localhost:${port}`);
     connectToDb();
 });

@@ -2,8 +2,8 @@
   "name": "lucrente-backend",
   "version": "1.0.0",
   "description": "Backend for Lucrente",
-  "main": "index.ts",
-  "author": "Yagyesh Bobde <yagyeshSRbobde@gmail.com>",
+  "main": "dist/index.js",
+  "author": "Yagyesh Bobde",
   "license": "MIT",
   "private": true,
   "scripts": {

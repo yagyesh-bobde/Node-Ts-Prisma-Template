@@ -2,6 +2,5 @@
   "builds": [{ "src": "dist/index.js", "use": "@vercel/node" }],
   "routes": [
     { "src": "/(.*)", "dest": "dist/index.js" }
-  ],
-  "buildCommand": "npx prisma generate --schema=./src/prisma/schema.prisma && rimraf dist && tsc"
+  ]
 }

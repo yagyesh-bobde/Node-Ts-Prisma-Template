@@ -2,7 +2,7 @@ require('dotenv').config()
 import express from 'express'
 import log from './utils/logger';
 import router from './routes';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client'
 import config from './config/default'
 
 
@@ -10,7 +10,7 @@ const app = express()
 const port = config.port
 
 export const prismaClient = new PrismaClient({
-    log: ['query', 'info', 'warn'],
+    log: ['query', 'info', 'warn', 'error'],
 });
 
 

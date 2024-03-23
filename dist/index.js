@@ -13,7 +13,7 @@ const default_1 = __importDefault(require("./config/default"));
 const app = (0, express_1.default)();
 const port = default_1.default.port;
 exports.prismaClient = new client_1.PrismaClient({
-    log: ['query', 'info', 'warn'],
+    log: ['query', 'info', 'warn', 'error'],
 });
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));

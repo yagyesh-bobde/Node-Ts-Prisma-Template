@@ -1,7 +1,6 @@
 require('dotenv').config()
 import express from 'express'
 import config from 'config'
-import connectToDb from './utils/connectToDb';
 import log from './utils/logger';
 import router from './routes';
 
@@ -18,5 +17,4 @@ app.use(router)
 
 app.listen(port, () => {
     log.info(`Server started on http://localhost:${port}`);
-    connectToDb();
 });

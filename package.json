@@ -2,13 +2,12 @@
   "name": "lucrente-backend",
   "version": "1.0.0",
   "description": "Backend for Lucrente",
-  "main": "index.ts",
   "author": "Yagyesh Bobde",
   "license": "MIT",
   "private": true,
   "scripts": {
     "start": "npm run build && node dist/index.js",
-    "build": "npx prisma generate --schema=./src/prisma/schema.prisma && rimraf dist && tsc && node dist/index.js"
+    "build": "npx prisma generate --schema=./src/prisma/schema.prisma && rimraf dist && tsc"
   },
   "devDependencies": {
     "@types/config": "^3.3.4",
